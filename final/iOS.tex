@@ -17,14 +17,12 @@
     \item PostgreSQL database used
     \item PHP has been used to make SQL queries.
     \item Three tables created which are as follows:
-    
-    \begin{itemize}
+\end{itemize}
+ \begin{itemize}
         \item Users
         \item role\_master
         \item masked\_ndvi
     \end{itemize}
-    
-\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -281,6 +279,124 @@ EyesOnCrops mainly consists of following:
 
 \begin{frame}
 \frametitle{Back-end: Getting data from NASA's server}
+\begin{itemize}
+    \item Python script to accomplish this
+    \item Reads the data from NASA's server without decompressing the zip file
+    \item Only district level data has been stored to prevent redundancy because state and country data includes district level data
+\end{itemize}
+\end{frame}
 
-   
+
+
+\begin{frame}
+\frametitle{Back-end: PHP web services for JSON parsing}
+\begin{itemize}
+    \item Python script to accomplish this
+    \item Reads the data from NASA's server without decompressing the zip file
+    \item Only district level data has been stored to prevent redundancy because state and country data includes district level data
+\end{itemize}
+
+\begin{itemize}
+    \item dbcon.php: database connection
+    \item credentials.php: register \& login services
+    \item get\_data.php: year, date and ndvi/anomaly data services
+    \item analysis.php: mean, standard deviation and for svd formatted data calculations
+\end{itemize}
+
+\begin{figure}
+    \centering
+    \begin{minipage}{.5\columnwidth}
+    \includegraphics[width=1.0\linewidth]{final/figures/php_dbcon.png}
+    \caption{database connection function for PostgreSQL written in PHP}
+    \end{minipage}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Using the application}
+\begin{itemize}
+    \item Select any filter
+    \item Tap on year list and then select date of specific year
+    \item Tap on any country/region on the map or globe view to visualize the data.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Using the app: Admin level 0: Country wise}
+\begin{columns}
+\column{0.5\textwidth}
+
+ \begin{itemize}
+       \item mean value calculated for the country on specific date
+       \item mask mapping of country according to the mean value.
+   \end{itemize}
+
+\column{0.55\textwidth}
+\begin{figure}
+    \centering
+    \begin{minipage}{.5\columnwidth}
+    \includegraphics[width=1.0\linewidth]{final/figures/admin_level_0_a.png}
+    \caption{United States for 11/11/2017}
+    \end{minipage}
+\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Using the app: Admin level 1: State wise}
+\begin{columns}
+\column{0.5\textwidth}
+
+ \begin{itemize}
+       \item mean value calculated for every state of the country on specific date
+       \item mask mapping of states according to the mean value.
+   \end{itemize}
+
+\column{0.55\textwidth}
+\begin{figure}
+    \centering
+    \begin{minipage}{.5\columnwidth}
+    \includegraphics[width=1.0\linewidth]{final/figures/admin_level_1_b.png}
+    \caption{United States and Brazil for 11/11/2017}
+    \end{minipage}
+\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Using the app: Admin level 2: Eco-district wise}
+\begin{columns}
+\column{0.5\textwidth}
+
+ \begin{itemize}
+       \item mean value calculated for every district of the country on specific date
+       \item mask mapping of districts according to the mean value.
+   \end{itemize}
+
+\column{0.55\textwidth}
+\begin{figure}
+    \centering
+    \begin{minipage}{.5\columnwidth}
+    \includegraphics[width=1.0\linewidth]{final/figures/admin_level_2.png}
+    \caption{Admin level 2: eco-district level}
+    \end{minipage}
+\end{figure}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Analysis}
+\begin{itemize}
+    \item Data downloading/exporting via email
+    \item Mean \& Standard deviation
+    \item SVD Analysis
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Analysis: Data downloading}
+
 \end{frame}
