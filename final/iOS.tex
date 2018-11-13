@@ -198,3 +198,89 @@ EyesOnCrops mainly consists of following:
             \caption{Home screen with two modes: Globe and Map view}
     \end{figure}
 \end{frame}
+
+
+\begin{frame}
+\frametitle{Front-end: Filter process}
+\begin{columns}
+\column{0.5\textwidth}
+
+ \begin{itemize}
+       \item Data type: NDVI / Anomaly
+       \item Year and date selection filter
+       \item Admin level 0, 1 and 2 filter
+       \item Color scheme filter
+   \end{itemize}
+
+\column{0.55\textwidth}
+\begin{figure}
+    \centering
+    \begin{minipage}{.5\columnwidth}
+    %\includegraphics[width=\linewidth]{ts-compare.png}
+    \includegraphics[width=\linewidth]{final/figures/filter.png}
+    \caption{Filter screen}
+    \end{minipage}
+\end{figure}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Front-end: Filter process: Year and date selection screen}
+    \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.95\linewidth]{final/figures/filter_year.png}
+            \caption{Filter: Year and date selection}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Front-end: Filter process:  Admin levels}
+
+    Admin levels describe how the data will be displayed on the home screen.
+
+   \begin{itemize}
+       \item level 0: country wise data - One mean value per country
+       \item level 1: state wise - one value per state
+       \item level 2: eco-district wise - one value per district
+   \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Front-end: Filter process: Color scheme selection}
+\begin{columns}
+\column{0.5\textwidth}
+
+ \begin{itemize}
+       \item Different color schemes available
+       \item Another way of visualizing the data in a different color palette. 
+   \end{itemize}
+
+\column{0.55\textwidth}
+\begin{figure}
+    \centering
+    \begin{minipage}{.5\columnwidth}
+    %\includegraphics[width=\linewidth]{ts-compare.png}
+    \includegraphics[width=\linewidth]{final/figures/color_scheme.png}
+    \caption{Filter: Color scheme selection screen}
+    \end{minipage}
+\end{figure}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Back-end process}
+
+   \begin{itemize}
+       \item Getting the data from NASA's server and storing it in database
+       \item Web services required for JSON parsing between database and the frontend coded in PHP
+   \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Back-end: Getting data from NASA's server}
+
+   
+\end{frame}
